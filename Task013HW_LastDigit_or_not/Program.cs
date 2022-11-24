@@ -6,7 +6,6 @@
 
 Console.Write("Введите число: ");
 int digit = Convert.ToInt32(Console.ReadLine());
-int thirdDigit = 0;
 
 if (digit < 100) Console.Write("У числа нет третьей цифры");
 else 
@@ -15,6 +14,6 @@ else
     {
         digit = digit / 10;
     }
-    thirdDigit = digit % 10; 
+    int thirdDigit = digit % 10; 
     Console.WriteLine("Третья цифра = " + thirdDigit);
 }
