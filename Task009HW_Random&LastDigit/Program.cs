@@ -7,7 +7,8 @@ int numberA = new Random().Next(10, 100);
 Console.WriteLine("Случайное число из диапазона [10, 99] = " + numberA);
 
 int lasdDigit = numberA % 10;
-int firstDigit = (numberA - lasdDigit) / 10;
+int firstDigit = numberA / 10;
 
 if (lasdDigit > firstDigit) Console.WriteLine("Наибольшая цифра в числе вторая = " + lasdDigit);
 if (lasdDigit < firstDigit) Console.WriteLine("Наибольшая цифра в числе первая = " + firstDigit);
+if (lasdDigit == firstDigit) Console.WriteLine("Обе цифры в числе = " + firstDigit);
