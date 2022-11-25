@@ -6,14 +6,15 @@
 
 //Решил сделать с проверкой трехзначности числа
 
-int digit;
+int digit, mod;
+
 Console.Clear();
 
 while (true)
 {
     Console.Write("Введите трехзначное число: ");
     digit = Convert.ToInt32(Console.ReadLine());
-    int mod = Math.Abs(digit);
+    mod = Math.Abs(digit);
     if (mod > 99 && mod < 1000) break;
     else Console.WriteLine("Вы ввели не ту цифру");
 }
