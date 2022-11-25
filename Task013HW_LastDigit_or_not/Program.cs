@@ -6,14 +6,15 @@
 
 Console.Write("Введите число: ");
 int digit = Convert.ToInt32(Console.ReadLine());
+int mod = Math.Abs(digit);
 
-if (digit < 100) Console.Write("У числа нет третьей цифры");
+if (mod < 100) Console.Write("У числа нет третьей цифры");
 else 
 {
-    while (digit > 999)
+    while (mod > 999)
     {
-        digit = digit / 10;
+        mod = mod / 10;
     }
-    int thirdDigit = digit % 10; 
+    int thirdDigit = mod % 10; 
     Console.WriteLine("Третья цифра = " + thirdDigit);
 }

@@ -13,10 +13,11 @@ while (true)
 {
     Console.Write("Введите трехзначное число: ");
     digit = Convert.ToInt32(Console.ReadLine());
-    if (digit > 99 && digit < 1000) break;
+    mod = Math.Abs(digit);
+    if (mod > 99 && mod < 1000) break;
     else Console.WriteLine("Вы ввели не ту цифру");
 }
 
-int semiDigit = (digit / 10) % 10;
+int semiDigit = (mod / 10) % 10;
 
 Console.WriteLine("Вторая цифра = " + semiDigit);
